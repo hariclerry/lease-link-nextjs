@@ -13,6 +13,11 @@ npm run dev
  - Reactjs
  - Nextjs
  - Tailwind
+ - Next-auth
+ - Google Auth
+ - Google Maps API
+ - MapBox-GL
+ - Photo swipe
 
 
 

@@ -21,7 +21,7 @@ const PropertyCard = ({ property }) => {
   };
 
   return (
-    <div className='rounded-xl shadow-md relative'>
+    <div className='rounded-xl shadow-2xl bg-background-primary  relative'>
         <Link
             href={`/properties/${property._id}`}
           >
@@ -36,14 +36,14 @@ const PropertyCard = ({ property }) => {
       </Link>
       <div className='p-4'>
         <div className='text-left md:text-center lg:text-left mb-6'>
-          <div className='text-gray-600'>{property.type}</div>
+          <div className='text-text-secondary'>{property.type}</div>
           <h3 className='text-xl font-bold'>{property.name}</h3>
         </div>
         <h3 className='absolute top-[10px] right-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right'>
           {getRateDisplay()}
         </h3>
 
-        <div className='flex justify-center gap-4 text-gray-500 mb-4'>
+        <div className='flex justify-center gap-4 text-text-primary mb-4'>
           <p>
             <FaBed className='md:hidden lg:inline' /> {property.beds}{' '}
             <span className='md:hidden lg:inline'>Beds</span>
@@ -59,7 +59,7 @@ const PropertyCard = ({ property }) => {
           </p>
         </div>
 
-        <div className='flex justify-center gap-4 text-green-900 text-sm mb-4'>
+        <div className='flex justify-center gap-4 text-text-green text-sm mb-4'>
           <p>
             <FaMoneyBill className='md:hidden lg:inline' /> Weekly
           </p>
@@ -80,7 +80,7 @@ const PropertyCard = ({ property }) => {
           </div>
           <Link
             href={`/properties/${property._id}`}
-            className='h-[36px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-center text-sm'
+            className='h-[36px] bg-button-primary-bg hover:bg-my-light-blue text-white px-4 py-2 rounded-lg text-center text-sm'
           >
             Details
           </Link>

@@ -20,14 +20,14 @@ const ProfilePage = async () => {
 
     const properties = propertiesDocs.map(convertToSerializableObject);
     return ( 
-        <section className="bg-blue-50">
+        <section className="bg-background-blue">
         <div className="container m-auto py-24">
           <div
-            className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
+            className="bg-background-primary px-6 py-8 mb-4 shadow-md rounded-md border-border m-4 md:m-0"
           >
             <h1 className="text-3xl font-bold mb-4">Your Profile</h1>
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/4 mx-20 mt-10">
+              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-auto mt-10 rounded-xl shadow-2xl bg-background-blue p-5 mb-6">
                 <div className="mb-4">
                   <Image
                     className="h-32 w-32 md:h-48 md:w-48 rounded-full mx-auto md:mx-0"
@@ -52,7 +52,9 @@ const ProfilePage = async () => {
                 { properties && properties.length === 0 ? (
                 <p>You have no property listings</p>
               ) : (
+                <div className="flex flex-wrap gap-4 sm:flex-col md:flex-row lg:flex-wrap">
                 <ProfileProperties properties={properties} />
+                </div>
               )}
               </div>
             </div>

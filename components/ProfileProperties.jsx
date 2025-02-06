@@ -28,8 +28,8 @@ const ProfileProperties = ({properties:initialProperties}) => {
     return (
         <>
       {  properties.map(property => (
-        <div className="mb-10" key={property._id}>
-        <Link href={`/property/${property._id}`}>
+        <div className="mb-10 rounded-xl shadow-2xl bg-background-blue p-5" key={property._id}>
+        <Link href={`/properties/${property._id}`}>
           <Image
             className="h-32 w-full rounded-md object-cover"
             src={property.images[0]}
@@ -47,7 +47,7 @@ const ProfileProperties = ({properties:initialProperties}) => {
         <div className="mt-2">
           <Link
             href={`/properties/${property._id}/edit`}
-            className="bg-blue-500 text-white px-3 py-3 rounded-md mr-2 hover:bg-blue-600"
+            className="bg-button-primary-bg hover:bg-my-light-blue text-white px-3 py-3 rounded-md mr-2"
           >
             Edit
           </Link>

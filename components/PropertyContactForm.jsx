@@ -2,9 +2,24 @@ import { FaPaperPlane } from "react-icons/fa";
 
 const PropertyContactForm = ({property}) => {
     return ( 
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-background-primary p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-bold mb-6">Contact Property Manager</h3>
-        <form>
+        {
+          property  && (
+            Object.keys(property.seller_info).map((key, index) => (
+              <div className="mb-4" key={index}>
+              <span className="mr-2 capitalize font-bold text-lg">
+                {key}:
+              
+              </span>
+              <span className="font-medium italic text-md">
+              { property.seller_info[key]}
+              </span>
+              </div>
+            ))
+          )
+        }
+        {/* <form>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -74,7 +89,7 @@ const PropertyContactForm = ({property}) => {
               <FaPaperPlane className="mr-2" />Send Message
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
      );
 }

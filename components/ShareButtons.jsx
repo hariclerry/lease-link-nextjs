@@ -37,7 +37,7 @@ const ShareButtons = ({property,  PUBLIC_DOMAIN }) => {
         <WhatsappShareButton
           url={shareUrl}
           title={property.name}
-          separator=':: '
+          separator='::'
         >
           <WhatsappIcon size={40} round={true} />
         </WhatsappShareButton>

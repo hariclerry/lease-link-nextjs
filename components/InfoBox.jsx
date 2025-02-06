@@ -9,7 +9,7 @@ const InfoBoxes = ({text, heading, buttonInfo, backgroundColor='bg-gray-100', te
         </p>
         <Link
           href={buttonInfo.link}
-          className={`${buttonInfo.backgroundColor} inline-block text-white rounded-lg px-4 py-2 hover:bg-blue-600`}
+          className={`${buttonInfo.backgroundColor} inline-block text-white rounded-lg px-4 py-2 hover:${buttonInfo.hover}`}
         >
          {buttonInfo.text}
         </Link>

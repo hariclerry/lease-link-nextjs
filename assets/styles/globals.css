@@ -1,3 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --bg-primary: #fefefe; /* Light gray */
+    --bg-secondary: #e9ecef; /* Slightly darker gray */
+    --bg-dark: #e5e7eb; /* Darker gray for contrast */
+    --bg-light-blue: #EFF6FF; /* Lighter blue for contrast */
+    --text-primary: #969aa0; /* Dark text */
+    --text-secondary: #495057; /* Lighter gray text */
+    --text-primary-green: #14532d; /* Softer gray text */
+
+    /* gradient bg */
+    --gradient-bg: linear-gradient(#215366, #081c34);
+
+    /* Buttons */
+    --btn-primary-bg: #08b4f6;
+    --btn-primary-text: #ffffff;
+    --btn-primary-border: #08b4f6;
+  
+    --btn-secondary-bg: #000000;
+    --btn-secondary-text: #f3f4f6;
+    --btn-secondary-border: #000000;
+  
+    --btn-outline-bg: transparent;
+    --btn-outline-text: #08b4f6;
+    --btn-outline-border: #08b4f6;
+
+    /* Borders */
+    --border-color: #e5e7eb;
+  }
+  
+  .dark {
+    --background: #111316;
+    --foreground: #ffffff;
+    --bg-primary: #20272f; /* Deep black-gray */
+    --bg-secondary: #0d1218; /* Slightly lighter */
+    --bg-dark: #252930; /* Dark gray */
+    --bg-light-blue: #263445; /* Lighter blue for contrast */
+    --text-primary: #8c9097; /* Light text */
+    --text-secondary: #b2b6b9; /* Softer gray text */
+    --text-primary-green: #157c3e; /* Softer gray text */
+
+    /* gradient bg */
+    --gradient-bg: linear-gradient(#081c34, #215366);
+
+    /* Buttons */
+    --btn-primary-bg: #08b4f6;
+    --btn-primary-text: #ffffff;
+    --btn-primary-border: #08b4f6;
+  
+    --btn-secondary-bg: #000000;
+    --btn-secondary-text: #f3f4f6;
+    --btn-secondary-border: #000000;
+  
+    --btn-outline-bg: transparent;
+    --btn-outline-text: #08b4f6;
+    --btn-outline-border: #08b4f6;
+
+    /* Borders */
+    --border-color: #191c20;
+  }
+  
+  /* Apply the colors globally */
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  input:focus, input:active,
+  textarea:focus, textarea:active,
+  select:focus, select:active
+  button:focus, button:active {
+    outline: none;
+  }

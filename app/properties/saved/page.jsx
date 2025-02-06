@@ -9,7 +9,7 @@ const SavedProperties = async() => {
 
     return ( 
         <section>
-           <div className="container lg:container m-auto px-4 py-6">
+           <div className="container lg:container m-auto px-4 py-6 mt-10">
             <h1 className="text-2xl mb-4">Saved Properties</h1>
             {bookmarks.length === 0 ? (
                 <p className="text-4xl">No saved properties</p>
