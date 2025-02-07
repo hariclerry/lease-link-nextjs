@@ -1,6 +1,5 @@
 import connectDB from "@/config/database"
 import User from "@/models/User";
-import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
 
@@ -13,7 +12,7 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       authorization: {
         params: {
-          scope: "openid email profile",
+          scope: "email profile",
         },
         // params: 'consent',
         access_type: 'offline',
@@ -22,7 +21,6 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
-  secret: process.env.AUTH_SECRET,
   // debug: true, 
   callbacks: {
     //Invoked on successful sign in
