@@ -30,7 +30,8 @@
     --btn-outline-border: #08b4f6;
 
     /* Borders */
-    --border-color: #e5e7eb;
+    --border-color-darker: #e5e7eb;
+    --border-color-lighter: #dfe2e6;
   }
   
   .dark {
@@ -61,7 +62,8 @@
     --btn-outline-border: #08b4f6;
 
     /* Borders */
-    --border-color: #191c20;
+    --border-color-darker: #191c20;
+    --border-color-lighter: #46494d;
   }
   
   /* Apply the colors globally */

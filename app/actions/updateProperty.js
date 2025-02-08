@@ -4,7 +4,7 @@ import connectDB from "@/config/database";
 import { revalidatePath } from "next/cache";
 import  Property from "@/models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 
 export default async function updateProperty(propertyId, formData) {
 

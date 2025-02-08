@@ -109,7 +109,7 @@ const Navbar = () => {
               <button
               key={index}
               onClick={() => signIn(provider.id)}
-              className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+              className="flex items-center text-white bg-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2"
             >
               <FaGoogle  className='text-white mr-2'/>
               <span>Login or Register</span>
@@ -196,7 +196,7 @@ const Navbar = () => {
               >
                 <Link
                   href="/profile"
-                  className="block px-4 py-2 text-sm text-text-foreground border-b border-border"
+                  className="block px-4 py-2 text-sm text-text-foreground border-b border-border-darker"
                   role="menuitem"
                   tabIndex="-1"
                   id="user-menu-item-0"
@@ -205,7 +205,7 @@ const Navbar = () => {
                 >
                 <Link
                   href="/properties/saved"
-                  className="block px-4 py-2 text-sm text-text-foreground border-b border-border"
+                  className="block px-4 py-2 text-sm text-text-foreground border-b border-border-darker"
                   role="menuitem"
                   tabIndex="-1"
                   id="user-menu-item-2"
@@ -215,9 +215,9 @@ const Navbar = () => {
                 <button
                 onClick={() => {
                   setIsProfileMenuOpen(false);
-                  signOut();
+                  signOut({ callbackUrl: "/" });
                 }}
-                  className="block px-4 py-2 text-sm text-text-foreground border-b border-border"
+                  className="block px-4 py-2 text-sm text-text-foreground border-b border-border-darker"
                   role="menuitem"
                   tabIndex="-1"
                   id="user-menu-item-2"
@@ -258,7 +258,7 @@ const Navbar = () => {
             >Add Property</Link>)}
          {
             !session && ( <button
-            className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-5"
+            className="flex items-center text-white bg-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 my-5"
           >
             <i className="fa-brands fa-google mr-2"></i>
             <span>Login or Register</span>

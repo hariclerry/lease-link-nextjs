@@ -4,7 +4,7 @@ import connectDB from '@/config/database';
 import Property from '@/models/Property';
 import Pagination from '@/components/Pagination';
 
-const PropertiesPage =  async({searchParams: {page=1, pageSize=9}}) => {
+const PropertiesPage =  async({searchParams: {page=1, pageSize=6}}) => {
    await connectDB();
    const skip = (page - 1) * pageSize;
    const total = await Property.countDocuments({});

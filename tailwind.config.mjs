@@ -49,7 +49,10 @@ export default {
             border: "var(--btn-outline-border)",
           }
         },
-        border: "var(--border-color)",
+        border: {
+          darker: "var(--border-color-darker)",
+          lighter: "var(--border-color-lighter)",
+        }
       },
     },
   },
